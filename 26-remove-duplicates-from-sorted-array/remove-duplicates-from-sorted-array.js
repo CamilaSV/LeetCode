@@ -4,7 +4,7 @@
  */
 
 var removeDuplicates = function(nums) {
-    let k = 1;
+    var k = 1;
 
     for ( let i = 0; i < nums.length; i++){
         if (nums[i] !== nums[k-1]){
@@ -13,5 +13,5 @@ var removeDuplicates = function(nums) {
         }
     }
 
-    return k--;
+    return k;
 };
