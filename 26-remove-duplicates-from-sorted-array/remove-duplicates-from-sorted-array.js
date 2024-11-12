@@ -4,20 +4,12 @@
  */
 
 var removeDuplicates = function(nums) {
-    let prev = undefined;
-    let i = 0;
-    let k = 0;
-
-    while (i < nums.length) {
-        if (nums[i] === prev){
-            nums.splice(i, 1)
+    for ( let i = 0; i < nums.length; i++){
+        if (nums[i] === nums[i-1]){
+            nums.splice(i, 1);
+            i--;
         }
-        else {
-            prev = nums[i];
-            i++;
-            k++;
-        }    
     }
 
-    return k;
+    return nums.length;
 };
