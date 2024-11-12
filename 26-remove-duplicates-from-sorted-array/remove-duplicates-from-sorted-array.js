@@ -6,6 +6,7 @@
 var removeDuplicates = function(nums) {
     let prev = undefined;
     let i = 0;
+    let k = 0;
 
     while (i < nums.length) {
         if (nums[i] === prev){
@@ -14,8 +15,9 @@ var removeDuplicates = function(nums) {
         else {
             prev = nums[i];
             i++;
+            k++;
         }    
     }
 
-    return nums.length;
+    return k;
 };
